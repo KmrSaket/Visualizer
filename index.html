@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./public/style/bootstrap.css">
+  <link rel="stylesheet" href="./public/style/dashboard.css">
+</head>
+
+<body>
+  <div id="canvas">
+
+  </div>
+  <div id="topribbon" ></div>
+  <div id="bg1" >  </div>
+  <div class="d-flex justify-content-center" id="projectTitleContainer" >
+    <div class="">
+      <h4 id="projectTitle">Algorithm Visualizer</h4>
+      <h6 id="projectSubTitle">One place for cool visuals</h6>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 align-items-start">
+
+
+        <div class="row justify-content-center">
+          <select id="algoSubType" class="btn btn-secondary" onchange="getAlgoSubType()">
+            <option value="null" class="dropdown-menu dropdown-item" disabled selected>Sorting Type</option>
+            <option value="bubble" class="dropdown-menu dropdown-item">Bubble</option>
+            <option value="merge" class="dropdown-menu dropdown-item">Merge</option>
+            <option value="insertion" class="dropdown-menu dropdown-item">Insertion</option>
+            <option value="quick" class="dropdown-menu dropdown-item">Quick</option>
+            <option value="selection" class="dropdown-menu dropdown-item">Selection</option>
+          </select>
+        </div>
+        <div class="col" id="populationcontainer">
+          <div class="row justify-content-center">
+            <label for="population">Population</label>
+          </div>
+          <div class="row justify-content-center">
+            <input type="range" name="population" min="2" max="100" value="50" class="slider" id="population" oninput="curpopulation()">
+          </div>
+        </div>
+        <div class="col" id="speedcontainer">
+          <div class="row justify-content-center">
+            <label>Speed</label>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4 justify-content-center">
+              <input type="radio" name="speed" value="3">
+              <label for="1">1X</label>
+            </div>
+            <div class="col-4 justify-content-center">
+              <input type="radio" name="speed" value="2" checked>
+              <label for="2">2X</label>
+            </div>
+            <div class="col-4 justify-content-center">
+              <input type="radio" name="speed" value="3">
+              <label for="3">3X</label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- <div class="row justify-content-center" id="speedRadio">
+            <input type="radio" id="fast" name="speedRadio">
+            <label  for="fast">Fast</label>
+            <input type="radio" id="slow" name="speedRadio">
+            <label  for="slow">Slow</label>
+        </div> -->
+
+        <div class="row justify-content-center" id="next">
+          <div class="col">
+            <button type="button" name="button" class="btn btn-outline-dark" onclick="run()" >N E X T</button>
+          </div>
+          <div class="col">
+            <button type="button" name="button" class="btn btn-outline-dark" onclick="reset()" >R E S E T</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-8">
+
+        <div id="vizholder">
+          <!-- <div class="bars">
+
+          </div>
+          <div class="bars">
+
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="./public/js/jquery-3.5.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./public/js/dashboard.js"></script>
+<script src="./public/js/visuals.js"></script>
+<script src="./public/js/sortingAlgo.js"></script>
+<!-- <script src="./public/js/sorting.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+
+</html>
