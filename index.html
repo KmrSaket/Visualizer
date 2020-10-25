@@ -9,82 +9,105 @@
 </head>
 
 <body>
-  <div id="canvas">
-
-  </div>
-  <div id="topribbon" ></div>
-  <div id="bg1" >  </div>
-  <div class="d-flex justify-content-center" id="projectTitleContainer" >
-    <div class="">
-      <h4 id="projectTitle">Algorithm Visualizer</h4>
-      <h6 id="projectSubTitle">One place for cool visuals</h6>
+  <div id="canvas"></div>
+  <div id="topribbon"></div>
+  <div class="d-flex justify-content-center" id="projectTitleContainer">
+    <div>
+      <h1 id="projectTitle">Algorithm Visualizer</h1>
+      <h4 id="projectSubTitle">One place for cool visuals</h4>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container-fluid mx-0">
     <div class="row">
-      <div class="col-sm-4 align-items-start">
+      <div class="col-3">
 
 
-        <div class="row justify-content-center">
-          <select id="algoSubType" class="btn btn-secondary" onchange="getAlgoSubType()">
-            <option value="null" class="dropdown-menu dropdown-item" disabled selected>Sorting Type</option>
-            <option value="bubble" class="dropdown-menu dropdown-item">Bubble</option>
-            <option value="merge" class="dropdown-menu dropdown-item">Merge</option>
-            <option value="insertion" class="dropdown-menu dropdown-item">Insertion</option>
-            <option value="quick" class="dropdown-menu dropdown-item">Quick</option>
-            <option value="selection" class="dropdown-menu dropdown-item">Selection</option>
-          </select>
+        <div class="row" id="newArray">
+          <div class="col">
+            Generate New Array
+          </div>
         </div>
-        <div class="col" id="populationcontainer">
-          <div class="row justify-content-center">
+        <div class="row justify-content-center" id="newbtns">
+          <div class="col-lg-4 text-center">
+            <button type="button" name="newArray" class="btn btn-dark" onclick="arrayinit()">Random</button>
+          </div>
+          <div class="col-lg-4 text-center">
+            <button type="button" name="newArray" class="btn btn-dark" onclick="descarrayinit()">Descending</button>
+          </div>
+          <div class="col-lg-4 text-center">
+            <button type="button" name="newArray" class="btn btn-dark" onclick="ascarrayinit()">Ascending</button>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-start">
+
+          <div class="col">
+            <select id="algoSubType" class="dropdown btn btn-secondary" onchange="getAlgoSubType()">
+              <option value="null" class="dropdown-item" disabled selected>Sorting Type</option>
+              <option value="bubble" class="dropdown-item">Bubble</option>
+              <option value="merge" class="dropdown-item">Merge</option>
+              <option value="insertion" class="dropdown-item">Insertion</option>
+              <option value="quick" class="dropdown-item">Quick</option>
+              <option value="selection" class="dropdown-item">Selection</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-content-start" id="populationcontainer">
+          <div class="col-xs-1 col-lg-4">
             <label for="population">Population</label>
           </div>
-          <div class="row justify-content-center">
+          <div class="col-xs-1 col-lg-3">
             <input type="range" name="population" min="2" max="100" value="50" class="slider" id="population" oninput="curpopulation()">
           </div>
         </div>
-        <div class="col" id="speedcontainer">
-          <div class="row justify-content-center">
+
+        <div class="row" id="speedcontainer">
+          <div class="col-lg-4">
             <label>Speed</label>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-4 justify-content-center">
-              <input type="radio" name="speed" value="3">
-              <label for="1">1X</label>
-            </div>
-            <div class="col-4 justify-content-center">
-              <input type="radio" name="speed" value="2" checked>
-              <label for="2">2X</label>
-            </div>
-            <div class="col-4 justify-content-center">
-              <input type="radio" name="speed" value="3">
-              <label for="3">3X</label>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-sm-4">
+                <input type="radio" name="speed" value="3">
+                <label for="1">1X</label>
+              </div>
+              <div class="col-sm-4">
+                <input type="radio" name="speed" value="2" checked>
+                <label for="2">2X</label>
+              </div>
+              <div class="col-sm-4">
+                <input type="radio" name="speed" value="1">
+                <label for="3">3X</label>
+              </div>
             </div>
 
           </div>
 
         </div>
 
-        <!-- <div class="row justify-content-center" id="speedRadio">
-            <input type="radio" id="fast" name="speedRadio">
-            <label  for="fast">Fast</label>
-            <input type="radio" id="slow" name="speedRadio">
-            <label  for="slow">Slow</label>
-        </div> -->
-
-        <div class="row justify-content-center" id="next">
+        <div class="row justify-content-center" id="btns">
           <div class="col">
-            <button type="button" name="button" class="btn btn-outline-dark" onclick="run()" >N E X T</button>
+            <button type="button" name="button" class="btn btn-outline-success" onclick="run()">N E X T</button>
           </div>
           <div class="col">
-            <button type="button" name="button" class="btn btn-outline-dark" onclick="reset()" >R E S E T</button>
+            <button type="button" name="button" class="btn btn-outline-danger" onclick="reset()">R E S E T</button>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" id="INFO">
+          <div class="col">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
           </div>
         </div>
       </div>
 
 
-      <div class="col-sm-8">
+      <div class="col-9">
 
         <div id="vizholder">
           <!-- <div class="bars">
@@ -113,8 +136,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="./public/js/dashboard.js"></script>
 <script src="./public/js/visuals.js"></script>
-<script src="./public/js/sortingAlgo.js"></script>
-<!-- <script src="./public/js/sorting.js"></script> -->
+<script src="./public/js/sorting/bubble sort.js"></script>
+<script src="./public/js/sorting/insertion sort.js"></script>
+<script src="./public/js/sorting/merge sort.js"></script>
+<script src="./public/js/sorting/quick sort.js"></script>
+<script src="./public/js/sorting/selection sort.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
 
 </html>

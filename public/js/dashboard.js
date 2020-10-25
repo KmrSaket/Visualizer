@@ -1,10 +1,11 @@
-var div_side_margin = 0.1;
+var div_side_margin = 0.2;
 var array = [];
 var divs = [];
 var population = document.getElementById('population').value;
 var vizContainer = document.getElementById("vizholder");
 var buttons = document.getElementsByName('button');
 var algoSubType = document.getElementById('algoSubType');
+var newArrayBtn = document.getElementsByName('newArray');
 var speedBtn = document.getElementsByName('speed');
 var populationRange = document.getElementsByName('population');
 
@@ -15,8 +16,46 @@ function getAlgoSubType() {
   return sortingName;
 }
 
+// initializing array by user in Ascending order
+function ascarrayinit() {
+  vizContainer.innerHTML = "";
+  array.splice(0, array.length);
+  for (var i = 0; i < population; i++) {
+    array.push(Math.floor(Math.random() * 85) + 10);
+  }
+  array.sort(function(a,b) {
+    return a-b;
+  });
+    for (var i = 0; i < array.length; i++) {
+      divs[i] = document.createElement("div");
+      vizContainer.appendChild(divs[i]);
+      divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
+    }
+
+}
+
+// initializing array by user in Descending order
+function descarrayinit() {
+  vizContainer.innerHTML = "";
+  array.splice(0, array.length);
+  for (var i = 0; i < population; i++) {
+    array.push(Math.floor(Math.random() * 85) + 10);
+  }
+  array.sort(function(a,b) {
+    return b-a;
+  });
+    for (var i = 0; i < array.length; i++) {
+      divs[i] = document.createElement("div");
+      vizContainer.appendChild(divs[i]);
+      divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
+    }
+
+}
+
 // initializing array
 function arrayinit() {
+  vizContainer.innerHTML = "";
+  array.splice(0, array.length);
   for (var i = 0; i < population; i++) {
     array.push(Math.floor(Math.random() * 85) + 10);
     divs[i] = document.createElement("div");
@@ -59,6 +98,9 @@ function enable_screen() {
   for (var i = 0; i < speedBtn.length; i++) {
     speedBtn[i].disabled = false;
   }
+  for (var i = 0; i < newArrayBtn.length; i++) {
+    newArrayBtn[i].disabled = false;
+  }
 }
 
 function disable_screen() {
@@ -67,6 +109,9 @@ function disable_screen() {
   populationRange[0].disabled = true;
   for (var i = 0; i < speedBtn.length; i++) {
     speedBtn[i].disabled = true;
+  }
+  for (var i = 0; i < newArrayBtn.length; i++) {
+    newArrayBtn[i].disabled = true;
   }
 }
 
@@ -106,32 +151,7 @@ function run() {
       selection_sort();
       break;
     default:
-      console.log("error");
+      console.log("empty");
 
   }
-}
-
-
-
-var canvasContainer = document.getElementById('canvas');
-var h,w;
-function setup() {
-
-  h = canvasContainer.offsetHeight;
-  w = canvasContainer.offsetWidth;
-  var canvas = createCanvas(w,h);
-  canvas.parent('canvas');
-  background(230,235,239);
-}
-
-function draw() {
-  // noFill();
-  // ellipse(random(0,w),random(0,h),2);
-  // ellipse(mouseX, mouseY, 25, 25);
-}
-function windowResized() {
-  h = canvasContainer.offsetHeight;
-  w = canvasContainer.offsetWidth;
-  resizeCanvas(w,h);
-  background(230,235,239);
 }
