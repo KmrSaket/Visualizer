@@ -67,13 +67,15 @@ body {
 }
 
 #newbtns button{
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: lighter;
   margin-top: 10px;
   width: auto;
   font-family: cursive;
 }
 
 #newArray{
+  font-weight: bolder;
   font-family: cursive;
   font-size: 20px;
   margin-top: 10px;

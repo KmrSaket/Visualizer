@@ -23,14 +23,14 @@ function ascarrayinit() {
   for (var i = 0; i < population; i++) {
     array.push(Math.floor(Math.random() * 85) + 10);
   }
-  array.sort(function(a,b) {
-    return a-b;
+  array.sort(function(a, b) {
+    return a - b;
   });
-    for (var i = 0; i < array.length; i++) {
-      divs[i] = document.createElement("div");
-      vizContainer.appendChild(divs[i]);
-      divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
-    }
+  for (var i = 0; i < array.length; i++) {
+    divs[i] = document.createElement("div");
+    vizContainer.appendChild(divs[i]);
+    divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
+  }
 
 }
 
@@ -41,14 +41,14 @@ function descarrayinit() {
   for (var i = 0; i < population; i++) {
     array.push(Math.floor(Math.random() * 85) + 10);
   }
-  array.sort(function(a,b) {
-    return b-a;
+  array.sort(function(a, b) {
+    return b - a;
   });
-    for (var i = 0; i < array.length; i++) {
-      divs[i] = document.createElement("div");
-      vizContainer.appendChild(divs[i]);
-      divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
-    }
+  for (var i = 0; i < array.length; i++) {
+    divs[i] = document.createElement("div");
+    vizContainer.appendChild(divs[i]);
+    divs[i].style = " margin:0% " + div_side_margin + "%; background-color:" + color1 + "; width:" + (100 / population - (2 * div_side_margin)) + "%; height:" + array[i] + "%;";
+  }
 
 }
 
@@ -149,6 +149,11 @@ function run() {
       disable_screen();
       initializing();
       selection_sort();
+      break;
+    case "heap":
+      disable_screen();
+      initializing();
+      heap_sort();
       break;
     default:
       console.log("empty");
