@@ -8,6 +8,7 @@ var algoSubType = document.getElementById('algoSubType');
 var newArrayBtn = document.getElementsByName('newArray');
 var speedBtn = document.getElementsByName('speed');
 var populationRange = document.getElementsByName('population');
+var type = 0;
 
 
 function getAlgoSubType() {
@@ -18,6 +19,10 @@ function getAlgoSubType() {
 
 // initializing array by user in Ascending order
 function ascarrayinit() {
+  newArrayBtn[0].className = "btn btn-dark";
+  newArrayBtn[1].className = "btn btn-dark";
+  newArrayBtn[2].className = "btn btn-outline-dark";
+  type = 2;
   vizContainer.innerHTML = "";
   array.splice(0, array.length);
   for (var i = 0; i < population; i++) {
@@ -36,6 +41,10 @@ function ascarrayinit() {
 
 // initializing array by user in Descending order
 function descarrayinit() {
+  newArrayBtn[0].className = "btn btn-dark";
+  newArrayBtn[1].className = "btn btn-outline-dark";
+  newArrayBtn[2].className = "btn btn-dark";
+  type = 1;
   vizContainer.innerHTML = "";
   array.splice(0, array.length);
   for (var i = 0; i < population; i++) {
@@ -54,6 +63,10 @@ function descarrayinit() {
 
 // initializing array
 function arrayinit() {
+  newArrayBtn[0].className = "btn btn-outline-dark";
+  newArrayBtn[1].className = "btn btn-dark";
+  newArrayBtn[2].className = "btn btn-dark";
+  type = 0;
   vizContainer.innerHTML = "";
   array.splice(0, array.length);
   for (var i = 0; i < population; i++) {
@@ -68,7 +81,18 @@ function curpopulation() {
   vizContainer.innerHTML = "";
   population = document.getElementById('population').value;
   array.splice(0, array.length);
-  arrayinit();
+  switch (type) {
+    case 0:
+      arrayinit();
+      break;
+    case 1:
+      descarrayinit();
+      break;
+    case 2:
+      ascarrayinit();
+      break;
+  }
+
 }
 
 function getSpeed() {
