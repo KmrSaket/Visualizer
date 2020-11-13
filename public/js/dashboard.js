@@ -11,6 +11,9 @@ var populationRange = document.getElementsByName('population');
 var type = 0;
 
 
+// setting intro modal
+$('#intro').modal('show');
+
 function getAlgoSubType() {
   sortingName = algoSubType.value;
   // buttons[0].disabled = false;
