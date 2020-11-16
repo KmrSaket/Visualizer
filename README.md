@@ -1,10 +1,9 @@
 # Visualizer
-This my side project where I  created a web page to depict some of the mostly used sorting Algorithms, using bars and colours.
-This portal can be used for education purpose, for explaining the Algorithm to freshers.
+This is my side project where I have created a web page to depict some of the mostly used Sorting Algorithms, using bars and colours.
+This portal can be used for educational purpose, for explaining the Algorithms to freshers.
 
 ## First thing First
-Here, Bars are used to represent a number in the array and it's height is proportional to the value of the element. Also, different color codes are used to distinguish between different
-steps involved in the algorithm.
+Here, Bars are used to represent a number in the array and it's height is proportional to the value of the element. Also, different color codes are used to distinguish between different steps involved in the algorithm.
 * Initial color	- ![#A9A9A9](https://via.placeholder.com/20/A9A9A9/000000?text=+) `#A9A9A9`
 * Checking Elements (Primary color)	- ![#9955dd](https://via.placeholder.com/20/9955dd/000000?text=+) `#9955dd`
 * Checking Elements (Secondary color)	- ![#99dd55](https://via.placeholder.com/20/99dd55/000000?text=+) `#99dd55`
@@ -16,27 +15,28 @@ steps involved in the algorithm.
 
 ## How to use
 Keeping freshers in mind, this webpage is designed in such a way that it's very easy to use and every functionalities are self explanatory.
+<ol>
+<li>Generating new array.
 
-1. Generating new array.
-
-![Visualizer/public/tutorials/step1.gif](public/tutorials/step1.gif)
-
-<br />
-2. Select any Sorting Algorithm.
-
-![Visualizer/public/tutorials/step2.gif](public/tutorials/step2.gif)
+![Visualizer/public/tutorials/step1.gif](public/tutorials/step1.gif)</li>
 
 <br />
-3. Control the array size (population).
+<li>Select any Sorting Algorithm.
 
-![Visualizer/public/tutorials/step3.gif](public/tutorials/step3.gif)
-
-<br />
-4. Choose the speed for visual and click NEXT.
-
-![Visualizer/public/tutorials/step4.gif](public/tutorials/step4.gif)
+![Visualizer/public/tutorials/step2.gif](public/tutorials/step2.gif)</li>
 
 <br />
+<li>Control the array size (population).
+
+![Visualizer/public/tutorials/step3.gif](public/tutorials/step3.gif)</li>
+
+<br />
+<li>Choose the speed for visual and click NEXT.
+
+![Visualizer/public/tutorials/step4.gif](public/tutorials/step4.gif)</li>
+
+<br />
+</ol>
 
 ## Demo
 
