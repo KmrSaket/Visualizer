@@ -1,6 +1,5 @@
 # Visualizer
-This is my side project where I have created a web page to depict some of the mostly used Sorting Algorithms, using bars and colours.
-This portal can be used for educational purpose, for explaining the Algorithms to freshers.
+This is my side project where I have created a web page to depict some of the mostly used Sorting Algorithms, using bars and colours. </br> This portal can be used for educational purpose, for explaining the Algorithms to freshers. </br> Visit the portal : <a href="https://kmrsaket.github.io/Visualizer/">Algorithm Visualizer</a>
 
 ## First thing First
 Here, Bars are used to represent a number in the array and it's height is proportional to the value of the element. Also, different color codes are used to distinguish between different steps involved in the algorithm.
